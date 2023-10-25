@@ -10,8 +10,8 @@ public class F1 extends Car {
     public void accelerate(int rate){
         int newSpeed = 0; //set the value of new speed by using currentSpeed and rate
         int currentSpeed = super.getCurrentSpeed();
-        super.setCurrentSpeed(currentSpeed + rate);
-        newSpeed = super.getCurrentSpeed();
+//        super.setCurrentSpeed(currentSpeed + rate);
+        newSpeed = currentSpeed + rate;
 
 
         /**
@@ -32,7 +32,7 @@ public class F1 extends Car {
         //for all other cases, change the gear accordingly
 
         if(newSpeed > 0) {
-            if(newSpeed >= 0 && newSpeed <= 50) {
+            if(newSpeed >= 1 && newSpeed <= 50) {
                 super.changeGear(1);
             } else if(newSpeed >= 51 && newSpeed <= 100) {
                 super.changeGear(2);
